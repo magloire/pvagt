@@ -6,13 +6,56 @@
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
-
+ 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+   <ion-list>
+    <ion-item>
+      <ion-label stacked>Dagseddel for P-vagt:</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Kort notat vedr. evt. hændelse:</ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Pålagte afgifter:</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Annulleringer:</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>
+      Jeg har været i:
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Lyngby midt</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Lyngby vest</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Virum</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Taarbæk</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>DTU</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Andet</ion-label>
+      <ion-checkbox id="andet"></ion-checkbox>
+    </ion-item>
+    <ion-item *ngIf="hide">
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  </ion-list>
 </ion-content>
